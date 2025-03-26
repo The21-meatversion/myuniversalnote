@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <meta content="width=device-width, initial-scale=1" name="viewport">
+            <link href="img/book_50.png" rel="icon">
+                <title>
+                    myuniversalnote
+                </title>
+            </meta>
+        </meta>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/accordion.css">
+    </head>
+    <body>
+        <button class="tablink" id="defaultOpen" onclick="openPage('Docker', this, '#3282B8')">
+            Docker
+        </button>
+        <button class="tablink" onclick="openPage('Linux', this, '#C63C51')">
+            Linux
+        </button>
+        <button class="tablink" onclick="openPage('Contact', this, '#704264')">
+            Contact
+        </button>
+        <button class="tablink" onclick="openPage('About', this, '#A76F6F')">
+            About
+        </button>
+        <div class="tabcontent" id="Docker">
+            <h3>
+                Docker
+            </h3>
+            <p>
+                <p> Docker is where the heart is.. </p>
+
+                <button class="accordion"><b>Install Docker on Ubuntu</b></button>
+				<div class="panel">
+				  <p>
+					<h3> 1. Update and install dependencies </h3>
+						<p>sudo apt-get update</p>
+						<p>sudo apt-get install ca-certificates curl gnupg lsb-release</p>
+
+					<h3> 2. Set up the Docker repository </h3>
+						<p>sudo mkdir -p /etc/apt/keyrings </p>
+						<p>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg </p>
+						<p>echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null </p>
+
+					<h3> 3. Install the docker engine </h3>
+						<p>sudo apt update</p>
+						<p>sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin</p>
+
+					<h3> 4. Install Docker Desktop </h3>
+						<p>sudo apt-get install ./docker-desktop-<//version>-<//arch>.deb</p>
+					</p>
+				</div>
+
+				<button class="accordion">Section 2</button>
+				<div class="panel">
+				  <p>Lorem ipsum...</p>
+				</div>
+
+				<button class="accordion">Section 3</button>
+				<div class="panel">
+				  <p>Lorem ipsum...</p>
+				</div>
+            </p>
+        </div>
+
+        <div class="tabcontent" id="Linux">
+            <h3>
+                Linux
+            </h3>
+            <p>
+                Some Linux this fine day!
+            </p>
+
+            <button class="accordion"><b>Modify terminal</b></button>
+				<div class="panel">
+					<h3>Location: /etc/default/console-setup</h3>
+					<p>What to change:</p>
+				  <p>FONTFACE="Terminus"<br>FONTSIZE="16x32"</p>
+				  <h3>Update after changed</h3>
+				  <p>sudo update-initramfs -u</p>
+				  <p>sudo reboot</p>
+				</div>
+        </div>
+
+        <div class="tabcontent" id="Contact">
+            <h3>
+                Contact
+            </h3>
+            <p>
+                Get in touch, or swing by for a cup of coffee.
+            </p>
+        </div>
+
+        <div class="tabcontent" id="About">
+            <h3>
+                About
+            </h3>
+            <p>
+                Who we are and what we do.
+            </p>
+        </div>
+
+        <!-- Javascript -->
+        <script src="js/javascript.js"></script>
+        <script src="js/accordion.js"></script>
+    </body>
+</html>
